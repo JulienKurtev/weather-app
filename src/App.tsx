@@ -32,8 +32,6 @@ class App extends React.Component<{}, weatherState>
         weatherRes.coord.lon
       );
 
-      console.log(forecastRes.current);
-      console.log(forecastRes.dailyForecast);
       this.setState({
         isLoading: false,
         location,
