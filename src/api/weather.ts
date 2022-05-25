@@ -1,6 +1,6 @@
 import { forecastData, weatherData } from "../types/promise-data";
 
-const baseURL =  "http://api.openweathermap.org/data/2.5/";
+const baseURL =  "https://api.openweathermap.org/data/2.5/";
 
 const getWeatherBasedOnLocation = async (location : String) : Promise<weatherData> => {
      const res = await fetch(
