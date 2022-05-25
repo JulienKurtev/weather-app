@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v29/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v29/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v29/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Odibee Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/odibeesans/v14/neIPzCSooYAho6WvjeToRYky.ttf) format('truetype');
+}
+.transition,
+.cities button {
+  transition: all 0.4s;
+}
+body {
+  background-color: #eef6fb;
+  font-family: 'Open Sans', sans-serif;
+}
+.text-center {
+  text-align: center;
+}
+p {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.cities {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.cities button {
+  background: none;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: inherit;
+}
+.cities button.active,
+.cities button:hover {
+  color: #5fb0e8;
+}
+.cities button.active {
+  font-weight: 700;
+}
+.section-weather {
+  padding: 50px 0;
+}
+.section-weather__content {
+  max-width: 700px;
+  margin: auto;
+}
+.section-weather .weather-container {
+  border: 2px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 25px #ccc;
+}
+.weather {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+.weather__icon {
+  font-size: 80px;
+  color: #81abb3;
+}
+.weather__temperature {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 30px;
+}
+.weather__description {
+  text-transform: capitalize;
+}
+.weather--current {
+  border-bottom: 2px solid #fff;
+}
+.weather--current .weather__temperature {
+  font-size: 50px;
+}
+.weather--current .weather__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather--current .weather__icon {
+  font-size: 150px;
+  margin-right: 20px;
+}
+.weather-forecast {
+  display: flex;
+}
+.weather-forecast .weather {
+  flex: 0 0 25%;
+  max-width: 25%;
+  border-right: 2px solid #fff;
+}
+.weather-forecast .weather:last-child {
+  border-right: 0;
+}
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+}
+.spinner .path {
+  stroke: #327dc9;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
