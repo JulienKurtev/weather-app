@@ -1,7 +1,7 @@
 interface forecastProps  {
     forecast: [
         {   
-            dt: number,
+            dt_txt: number,
             main: {
                 temp: number
             }
